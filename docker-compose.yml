@@ -8,8 +8,9 @@ services:
     ports:
       - "1234:3000"
     volumes:
-      - ./data:/dataset
+      - ./Dataset:/dataset
       - grafana-storage:/var/lib/grafana
+      - ./grafana.ini:/etc/grafana/grafana.ini
 
 volumes:
   grafana-storage: {}
